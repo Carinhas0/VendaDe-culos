@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Link css-->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+     /*Produtos Style*/
+      body {
+        font-family: Arial, sans-serif;
+    }
+
+     h1 {
+       text-align: center;
+    }
+
+     ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+    }
+
+     li {
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       padding: 10px;
+       margin: 10px;
+       display: inline-block;
+       width: 200px;
+       text-align: center;
+       box-sizing: border-box;
+    }
+    
+      img {
+        display: flex;
+        max-width: 100%;
+        height: auto;
+           
+    }
+  
+     p {
+     margin: 5px 0;
+    }
+    
+    /*Produtos Style*/
+    /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 999;
+            color: #fff;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .mobile-menu-header {
+            text-align: right;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .service-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service-block {
+            width: calc(33.33% - 20px); /* Adjust width as needed */
+            background-color: #3498db; /* Blue background color */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            color: #fff; /* Text color */
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .service-block {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-block {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Catálogo|Ocúlos Juliet</title>
+</head>
+<body>
+    <!--header-->
+    <header style="background-image: url(img/background.jpg);">
+        <!--container-->
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.PNG" alt="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="catalgo.html">Catálogo</a>
+                    <a href="login.html">Login</a>
+                    <a class="btn" href="contacto.html">Contacto</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="baner-text">
+                    <h1>Catálogo</h1>
+                </div>
+            </section>
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="close-icon">&times;</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="catalgo.html">Catálogo</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+    <!--end Mobile Menu -->
+    <!--Product-->
+        <h1>Produtos</h1>
+        <ul>
+            <li>
+                <img src="img/juliet1.png" alt="">
+                <h2>Juliet-Ouro</h2>
+        </ul>
+        <ul>
+            <li>
+                <img src="img/juliet3.png" alt="">
+                <h2>Juliet-Rosa</h2>           
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <img src="img/juliet5.PNG" alt="">
+                <h2>Juliet-Amarela</h2>        
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <img src="img/juliet6.PNG" alt="">
+                <h2>Juliet- Vermelha</h2>           
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <img src="img/juliet7.PNG" alt="">
+                <h2>Juliet-Branca</h2>        
+            </li>
+        </ul>
+      
+    <!--end Product-->
+    <!--footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                
+               <a href="#"> <i class="fa fa-instagram" ></i></a>
+               <a href="#"> <i class="fa fa-github" ></i></a>
+               <a href="#"> <i class="fa fa-linkedin" ></i></a>
+            <p>Desenvolvido por André Vicente e Dinis Caio</p>
+        </div>
+    </footer>
+    <!--end footer-->
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const closeIcon = document.querySelector('.mobile-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        menuIcon.addEventListener('click', function () {
+            mobileMenu.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', function () {
+            mobileMenu.style.display = 'none';
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                mobileMenu.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>

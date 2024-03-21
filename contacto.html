@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Link css-->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .faca.mais .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px; /* Adjust as needed */
+        }
+
+        .faca.mais .faca-mais-img img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .faca-mais-text h3 {
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px; /* Add margin-top for space between the cards */
+        }
+
+        .card-item {
+            width: 30%; /* Adjust width as needed */
+            padding: 20px; /* Add padding for space within the cards */
+            border: 1px solid #ccc; /* Example border */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            background-color: #f9f9f9; /* Background color for the card */
+            border-radius: 8px; /* Add border-radius for rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow for a subtle elevation effect */
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 999;
+            color: #fff;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .mobile-menu-header {
+            text-align: right;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .service-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service-block {
+            width: calc(33.33% - 20px); /* Adjust width as needed */
+            background-color: #3498db; /* Blue background color */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            color: #fff; /* Text color */
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .service-block {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-block {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Contactos|Ocúlos Juliet</title>
+</head>
+<body>
+    <!--header-->
+    <header style="background-image: url(img/background-contacto.jpg);">
+        <!--container-->
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.PNG" alt="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="catalgo.html">Catálogo</a>
+                    <a href="login.html">Login</a>
+                    <a class="btn" href="contacto.html">Contacto</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="baner-text">
+                    <h1>Entre em contacto</h1>
+                    <p>
+                        Entre em contacto com a nossa loja, para fazeres uma compra de um par de Óculos Juliet.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="close-icon">&times;</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="catalgo.html">Catalgo</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+    <!--end Mobile Menu -->
+   <section class="contacto">
+         <div class="container">
+           
+            <div class="contacto-info">
+                <div class="left-side">
+                
+
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p>oculos.juliet@gmail.com</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>345678111</p> 
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>322316967</p> 
+                    </div>
+                </div>
+                <div class="right-side">
+                    <form action="">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="text" placeholder="Assunto" required>
+                        <textarea cols="30" rows="10" placeholder="Mensagem" required></textarea>
+                        <button class="btn">Enviar Mensagem</button>  
+                        
+                    </form>
+                </div>
+            </div>
+         </div>
+   </section>
+    <!-- Button to return to index -->
+    <div class="container">
+        <a href="index.html" class="btn">Voltar para o Índice</a>
+       </div>       
+       <!--end Button to return to index -->
+    <!--footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+               <a href="#"> <i class="fa fa-facebook"></i></a>
+               <a href="#"> <i class="fa fa-instagram" ></i></a>
+               <a href="#"> <i class="fa fa-github" ></i></a>
+               <a href="#"> <i class="fa fa-linkedin" ></i></a>
+            <p>Desenvolvido por André Vicente e Dinis Caio</p>
+        </div>
+    </footer>
+    <!--end footer-->
+   
+   <!-- JavaScript for Mobile Menu -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const closeIcon = document.querySelector('.mobile-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        menuIcon.addEventListener('click', function () {
+            mobileMenu.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', function () {
+            mobileMenu.style.display = 'none';
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                mobileMenu.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
